@@ -674,7 +674,7 @@ function processDeckString(cardList, cardList2, callback)
                     multiverseNumber = v
                 end
 
-                if (string.len(trim(multiverseNumber)) > 0 and trim(multiverseNumber) != "0") then
+                if (string.len(trim(multiverseNumber)) > 0 and trim(multiverseNumber) ~= "0") then
                     multiverseURL = multiverseBaseURL .. "multiverse/" .. multiverseNumber
                 else
                     sendOutput("Missing multiverse id. Using fallback from text export for card: " .. cardList2Arr[i])
